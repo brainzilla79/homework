@@ -23,7 +23,6 @@ class Board
 
   def make_move(start_pos, current_player_name)
     stones = @cups[start_pos]
-    # byebug
     @cups[start_pos] = []
     idx = start_pos
     until stones.empty?
@@ -61,10 +60,12 @@ class Board
   end
 
   def one_side_empty?
-    @cups[0..5].none? || @cups[7..12].none?
+    @cups[0..5].all?(&:none?) || @cups[7..12].all?(&:none?)
   end
 
   def winner
+    return :draw if @cups[6].count == @cups[13].count
+    @cups[6].count > @cups[13].count ? @name1 : @name2
   end
 end
 
