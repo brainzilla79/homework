@@ -17,7 +17,7 @@
 # Table name: castings
 #  id          :integer      not null, primary key
 #  movie_id    :integer      not null
-#  actor_id    :integer      not null
+#  actor_id    :intcdeger      not null
 #  ord         :integer
 
 
