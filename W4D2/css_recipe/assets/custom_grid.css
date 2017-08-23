@@ -1,0 +1,34 @@
+/* PUT FLUID GRID CODE HERE */
+
+.hamburger-dropdown {
+  display: none;
+}
+
+
+@media all and (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+
+  .hamburger-dropdown{
+    display: block;
+  }
+
+  .hamburger-dropdown > li {
+    background: url(images/hamburger.png);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+
+  .hamburger-dropdown ul {
+    position: absolute;
+  }
+
+  .hamburger-dropdown:hover ul {
+    display: block;
+    background-color: white;
+    top: 50px;
+ }
+}
