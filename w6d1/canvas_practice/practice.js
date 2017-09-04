@@ -14,4 +14,10 @@ document.addEventListener("DOMContentLoaded", function(){
   ctx.stroke();
   ctx.fillStyle = "#C5D8E7";
   ctx.fill();
+
+  ctx.beginPath();
+  ctx.moveTo(500, 500);
+  ctx.lineTo(150, 300);
+  ctx.lineTo(150, 100);
+  ctx.fill();
 });
