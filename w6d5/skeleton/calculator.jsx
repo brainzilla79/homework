@@ -7,6 +7,7 @@ class Calculator extends React.Component {
     this.setNum1 = this.setNum1.bind(this);
     this.setNum2 = this.setNum2.bind(this);
     this.add = this.add.bind(this);
+    this.clear = this.clear.bind(this);
 
   }
 
@@ -26,13 +27,21 @@ class Calculator extends React.Component {
     this.setState({ result });
   }
 
+  clear(e) {
+    const num1 = "";
+    const num2 = "";
+    const result = 0;
+    this.setState({ num1, num2, result });
+  }
+
   render() {
     return (
       <div>
         <h1>{this.state.result}</h1>
-          <input onChange={this.setNum1} value={this.state.num1} />
-          <input onChange={this.setNum2} value={this.state.num2} />
+        <input onChange={this.setNum1} value={this.state.num1} />
+        <input onChange={this.setNum2} value={this.state.num2} />
         <button onClick={this.add}>Add</button>
+        <button onClick={this.clear}>Clear</button>
       </div>
     );
   }
